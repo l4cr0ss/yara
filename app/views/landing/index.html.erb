@@ -1,2 +1,25 @@
 <h1>Yet Another Rails App</h1>
 <p>Welcome! Please enjoy your stay</p>
+
+<hr>
+
+<h1><%= link_to 'Articles', articles_path %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= link_to 'Show', article %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
